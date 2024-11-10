@@ -15,29 +15,24 @@ const App = () => {
 
   const [filter, setFilter] = useState('');
 
-  // Завантаження контактів з локального сховища
   useEffect(() => {
     const storedContacts = JSON.parse(localStorage.getItem('contacts'));
     if (storedContacts) setContacts(storedContacts);
   }, []);
 
-  // Збереження контактів у локальне сховище
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  // Додавання нового контакту
   const addContact = ({ name, number }) => {
     const newContact = { id: nanoid(), name, number };
     setContacts((prevContacts) => [newContact, ...prevContacts]);
   };
 
-  // Видалення контакту
   const deleteContact = (contactId) => {
     setContacts((prevContacts) => prevContacts.filter(contact => contact.id !== contactId));
   };
 
-  // Фільтрація контактів
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
