@@ -1,3 +1,27 @@
 .searchBox {
-  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  width: 95%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchBox input:hover {
+  background-color: white; 
+  border-color: blue; 
+}
+
+.searchBox input:focus {
+  background-color: white; 
+  border-color: blue; 
 }
