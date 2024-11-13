@@ -1,53 +1,54 @@
 .form {
-  border: 2px solid darkgrey;
+  border: 2px solid #ccc;
   padding: 20px;
   border-radius: 5px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
-.label {
-  font-weight: bold;
-  margin-bottom: 5px; 
-  text-align: left; 
-}
-
-input {
+.field input {
   padding: 8px;
-  width: 95%; 
-  border: 1px solid #ccc;
+  width: 80%;
+  border: 1px solid darkgray;
   border-radius: 4px;
 }
 
-.contactForm input:hover {
-  background-color: #f0f8ff; 
-  border-color: gray; 
+.field input:hover,
+.field input:focus {
+  background-color: #f0f8ff;
+  border-color: gray;
 }
 
-.contactForm input:focus {
-  background-color: #f0f8ff; 
-  border-color: gray; 
-}
-
-.contactForm button {
+button {
   background-color: lightgrey;
   color: black;
-  border-radius: 5px; 
-  padding: 8px 15px;
-  cursor: pointer;
-  width: 50%; 
   border: 2px solid darkgrey;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  align-self: center;
+  width: 100%;
 }
 
-.contactForm button:hover,
-.contactForm button:focus { 
-  border: 2px solid blue;
+button:hover,
+button:focus {
+  border-color: blue;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
 }
